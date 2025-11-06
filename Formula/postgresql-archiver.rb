@@ -5,23 +5,23 @@
 class PostgresqlArchiver < Formula
   desc "Archive PostgreSQL partition data to object storage with parallel processing"
   homepage "https://github.com/airframesio/postgresql-archiver"
-  version "1.0.3"
+  version "1.1.0"
   license "MIT"
 
   depends_on "postgresql" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/airframesio/postgresql-archiver/releases/download/v1.0.3/postgresql-archiver-1.0.3-darwin-amd64.tar.gz"
-      sha256 "55ef5e83871c9a89d52657689170565dd25de4a194574d02ec73c992d01fbb83"
+      url "https://github.com/airframesio/postgresql-archiver/releases/download/v1.1.0/postgresql-archiver-1.1.0-darwin-amd64.tar.gz"
+      sha256 "2d8d9c5bfd3277d27cdf1a95438713de2741e553544f68bcb2acca4399b31160"
 
       def install
         bin.install "postgresql-archiver"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/airframesio/postgresql-archiver/releases/download/v1.0.3/postgresql-archiver-1.0.3-darwin-arm64.tar.gz"
-      sha256 "84c3a4f8b39746705ee0cfe5d8ddfff08d41c83e3c48417c70d074806047b655"
+      url "https://github.com/airframesio/postgresql-archiver/releases/download/v1.1.0/postgresql-archiver-1.1.0-darwin-arm64.tar.gz"
+      sha256 "14085847962224ba34ae3bbf74e7ac508c4f962bbdb34875156a97a3e0c61e0f"
 
       def install
         bin.install "postgresql-archiver"
@@ -31,15 +31,15 @@ class PostgresqlArchiver < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/airframesio/postgresql-archiver/releases/download/v1.0.3/postgresql-archiver-1.0.3-linux-amd64.tar.gz"
-      sha256 "0e6fd71a06167c0d4a0b47301bfb508917588424d97a2985309b9494ffede576"
+      url "https://github.com/airframesio/postgresql-archiver/releases/download/v1.1.0/postgresql-archiver-1.1.0-linux-amd64.tar.gz"
+      sha256 "1f969f6b03fc1d862458ed035442688c777ec8387a0a573f18d69da8943e9afc"
       def install
         bin.install "postgresql-archiver"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/airframesio/postgresql-archiver/releases/download/v1.0.3/postgresql-archiver-1.0.3-linux-arm64.tar.gz"
-      sha256 "fa400fde64faf5de61042f7e98d4da06baeaf534819aba13c372f724a639a6ba"
+      url "https://github.com/airframesio/postgresql-archiver/releases/download/v1.1.0/postgresql-archiver-1.1.0-linux-arm64.tar.gz"
+      sha256 "179164da6db94d3096fbf69655a64ecc289c62e2e2007a656cf4e6edfeed9cdf"
       def install
         bin.install "postgresql-archiver"
       end
