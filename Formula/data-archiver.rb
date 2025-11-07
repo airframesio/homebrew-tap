@@ -5,23 +5,23 @@
 class DataArchiver < Formula
   desc "Archive database data to object storage with parallel processing. Currently supports PostgreSQL input and S3-compatible output."
   homepage "https://github.com/airframesio/data-archiver"
-  version "1.4.0"
+  version "1.4.1"
   license "MIT"
 
   depends_on "postgresql" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/airframesio/data-archiver/releases/download/v1.4.0/data-archiver-1.4.0-darwin-amd64.tar.gz"
-      sha256 "cd06b675ebb8381b0647d3f3ccfedf2f577a82f2c1c984cf53538a18b782a740"
+      url "https://github.com/airframesio/data-archiver/releases/download/v1.4.1/data-archiver-1.4.1-darwin-amd64.tar.gz"
+      sha256 "e1268af94072f462ea2949f60471052cb1144d01b4363fddd4783fab37217505"
 
       def install
         bin.install "data-archiver"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/airframesio/data-archiver/releases/download/v1.4.0/data-archiver-1.4.0-darwin-arm64.tar.gz"
-      sha256 "4677f87f571531156aee34404a06c13991201cd9622ce858a5370b53491345d2"
+      url "https://github.com/airframesio/data-archiver/releases/download/v1.4.1/data-archiver-1.4.1-darwin-arm64.tar.gz"
+      sha256 "9918148056f378727f74f05377b219deaadb3a38e7bf681ab2afd3d089fa98d4"
 
       def install
         bin.install "data-archiver"
@@ -31,15 +31,15 @@ class DataArchiver < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/airframesio/data-archiver/releases/download/v1.4.0/data-archiver-1.4.0-linux-amd64.tar.gz"
-      sha256 "1f38f6f6fdae47a80d73fcf7c844ce4bb6a74e48b084c283cdff68f4f5fe2e04"
+      url "https://github.com/airframesio/data-archiver/releases/download/v1.4.1/data-archiver-1.4.1-linux-amd64.tar.gz"
+      sha256 "5569fd9c1472ba615a97d3734997759ed7d76e91c325dc0f60132ac40920667c"
       def install
         bin.install "data-archiver"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/airframesio/data-archiver/releases/download/v1.4.0/data-archiver-1.4.0-linux-arm64.tar.gz"
-      sha256 "39003ff8aa77d2d454c8f297791403969cc18b046ecb6068f0de7fd58f841ee4"
+      url "https://github.com/airframesio/data-archiver/releases/download/v1.4.1/data-archiver-1.4.1-linux-arm64.tar.gz"
+      sha256 "7499ed7a7c09dc8accb601d83c14ea9a8bb6a8a6b61ed706666d2c609e38543d"
       def install
         bin.install "data-archiver"
       end
